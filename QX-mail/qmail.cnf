@@ -1,0 +1,120 @@
+#
+# Probable config file for Qmail server
+#
+
+
+<server>
+
+
+# root of the server, where mailboxes are stored
+MXroot			/MXroot
+
+
+# interval in seconds to sync with external mailboxes
+SyncInterval	10
+
+
+# timeout in seconds to wait for new commands
+RcvTimeout		60
+
+
+# server FQDN to report
+ServerFQDN		qnx.catnet.kaluga.org
+
+
+
+PoolLoWater		1
+PoolHiWater		5
+PoolMax			20
+PoolIncrement	2
+
+ConnBufSize		4096
+
+UseDNS			192.168.1.1
+
+AVEnable		1
+
+
+
+
+# LogFile directive, if not specified - /dev/null is used
+# If file exists - it is appended - else - created
+#
+# e.g.:
+#
+LogFile			/MXroot/qmail.log
+
+# LogLevel specifies how detailed will be log of the server:
+# the higher the number - the more detailed will be log.
+#
+#	0	- only system info (startup time and so on)
+#	1	- system + error messages
+#	2	- system + error + warning messages
+#	3+	- system + error + warning + info messages
+LogLevel		2
+
+
+
+# SMTPRelay directive is used to force server redirect all
+# the mail for external recipients to the specified relay.
+# If there is no such directive - server will try to
+# deliver message itself.
+#
+# SMTPRelay some.relay.on.the.net
+#
+# or
+#
+# SMTPRelay [xxx.yyy.zzz.iii:port]
+# SMTPRelay qnx.catnet.kaluga.org
+# SMTPRelay [10.0.1.5]
+
+
+
+
+
+#binding server to addresses
+Pop3Listen 192.168.1.1:7110
+Pop3Listen 10.0.1.5
+Pop3Listen 192.168.1.1:2150
+
+SmtpListen 192.168.1.1:7025
+SmtpListen 10.0.1.5
+SmtpListen 10.0.1.5:2254
+
+</server>
+
+
+
+
+
+
+
+
+
+
+
+
+# 
+# here follow mailboxes
+#
+
+<mailbox>
+User		mikep@catnet.kaluga.org
+Password	secret
+
+#
+# ExtSync command:
+# ExtSync	pop.server username password
+#ExtSync	mx.kaluga.org	mikep@kaluga.org	6365522
+
+</mailbox>
+
+<mailbox>
+User		admin@catnet.kaluga.org
+Password	asecret
+</mailbox>
+
+<mailbox>
+User		catmax@catnet.kaluga.org
+Password	6365533
+</mailbox>

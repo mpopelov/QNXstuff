@@ -1,0 +1,47 @@
+<server>
+
+# configuring pool of working threads
+WorkpoolMin		3
+WorkpoolMax		30
+WorkpoolSpare	10
+
+# restricting maximum number of clients
+MaxClients		100
+
+# size of send/recieve buffers per connection
+CliBuffers		8192
+
+
+
+</server>
+
+
+
+
+#
+# Here follows description of virtual hosts this server
+# maintains.
+#
+
+<vhost>
+	# Address of the form x.y.z.h[:port]
+	# "port" parameter is optional and by default equals to 80
+	Address		10.0.1.5
+	
+	# Server FQDN
+	VhostFQDN	this.server.mydomain.com
+	
+	# Server root directory
+	VhostRoot	/www/pages/
+	
+	# directory index file
+	VhostIndex	index.html
+	
+	# ????
+</vhost>
+
+
+
+#one more vhost
+#<vhost>
+#</vhost>

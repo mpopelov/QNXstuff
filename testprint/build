@@ -1,0 +1,3 @@
+#!/bin/sh
+qcc -c testprint.c
+qcc -o testprint testprint.o

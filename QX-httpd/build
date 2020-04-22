@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "Building server..."
+cd server
+make
+cd ..
+
+echo "Building modules..."
+cd modules
+make
+cd ..
+
+echo "Done!"

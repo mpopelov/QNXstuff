@@ -1,0 +1,60 @@
+#
+# Here comes configuration of the server daemon
+#
+
+<server>
+
+#
+# Here comes configuration of pool of processing threads
+PoolLoWater		2
+PoolHiWater		10
+PoolMax			20
+PoolIncrement	2
+
+#
+# Here comes configuration of cache values
+CacheMax		1000
+CacheTTL		300
+
+#
+# Here we configure how many queries the server
+# will be able to "swallow"
+#
+QueueLen		200
+
+#
+# Here we bind server to some address.
+# If there is no binding - server starts listening on all available
+# interfaces. Port is always 53.
+Bind			10.0.1.5
+
+#
+# Here comes the list of external servers.
+# The last one takes precedence (i.e. it is queried first)
+ExternalDNS		10.0.1.3
+#ExternalDNS		10.1.55.7
+#ExternalDNS		195.112.112.1
+#ExternalDNS		195.112.96.21
+
+</server>
+
+
+<zone> catnet.kaluga.org
+# version
+# ttl
+# flush_interval
+# what_else_we_may_need
+	
+	<host> 30 qnx.
+		address		10.0.1.5
+		alias		test.qnx. test.mikep.net
+		mx			30
+		ns			1
+	</host>
+	
+	<host> 20 mikep.
+		address		10.6.14.36 192.168.1.1
+		alias		mikep.mikep.net cool.mikep.
+	</host>
+	
+</zone>

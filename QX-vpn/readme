@@ -1,0 +1,8 @@
+To build the project - run #make and 2 files are linked:
+
+devn-qx-vpn.so - an interface to inject packets into the io-net stream.
+                 Used to send packets of clients we got from PPtP stream
+                 and get data to send back to clients.
+
+qx-vpn         - a daemon that handles PPtP requests and establishes data
+                 links to push PPP packets trough the network.
