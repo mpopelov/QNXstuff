@@ -1,0 +1,18 @@
+# Add one more field to table `taxes'
+# that reflects monthly tax for using the system
+
+QXBASE_ROOT	/Billing
+QXBASE_DEV	/dev/Qbase
+
+TABLE		taxes
+ROWS_PP		30
+LOCK_PAGES	3
+
+#RECREATEONLY
+
+# Here follow columns
+COLUMN	old	1
+COLUMN	old	2
+COLUMN	old	3
+COLUMN	old	4
+COLUMN	DOUBLE

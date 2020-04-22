@@ -1,0 +1,44 @@
+QX-base.
+
+Simple database engine.
+No support for relational data storage, not for complete databases.
+The main purpose is to allow fast acces to data structured and stored in tables.
+All tables have fixed-length records.
+The most important requirement for database engine was its ability
+to make 'INSERT' fast.
+
+
+PERFORMANCE NOTES:
+
+	1) Do not use one connection to serve many tables ( permanently changing them
+	   with QBASE_CMD_SELECT) - better use separate connection for each table
+	   you need to serve.
+	
+	2) When using filters for data retrieval take in mind following:
+	
+		-	The strongest condition to be met should be added to filter
+			stack !!!_LAST_!!!
+			
+		-	blah blah blah
+		
+	3) Another blah blah blah
+
+
+
+
+
+
+
+	----------------------------------------------------
+
+	With best regards
+	Mike Anatoly Popelov
+	
+	www:	www.kaluga.org
+			mikep.qnx.org.ru
+	
+	e-mail:	mikep@kaluga.org
+			mikep@qnx.org.ru
+			kp@mail.ru
+			
+	phone:	+7 (903) 696-55-22

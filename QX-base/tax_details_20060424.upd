@@ -1,0 +1,22 @@
+# Add one more field to table `tax_details'
+# that reflects taxes based on daytime
+
+QXBASE_ROOT	/Billing
+QXBASE_DEV	/dev/Qbase
+
+TABLE		tax_details
+ROWS_PP		100
+LOCK_PAGES	3
+
+#RECREATEONLY
+
+# Here follow columns
+COLUMN	old	1
+COLUMN	old	2
+COLUMN	old	3
+COLUMN	old	4
+COLUMN	old	5
+COLUMN	old	6
+COLUMN	old	7
+COLUMN	old	8
+COLUMN	UINT

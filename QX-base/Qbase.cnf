@@ -1,0 +1,28 @@
+#
+# Configuration for Qbase database
+#
+
+# this lets you control the pool of working
+# threads
+
+POOL_LOWATER	1
+POOL_HIWATER	2
+POOL_INCREMENT	1
+POOL_MAXIMUM	3
+
+
+# This lets you change where RM will register
+# its resource
+#
+# Default is: /dev/Qbase
+
+RM_PATH 		/dev/Qbase
+
+
+
+# this lets you set the base directory, where
+# your tables will reside
+#
+# Default is: /tmp 
+
+DB_PATH			/Billing

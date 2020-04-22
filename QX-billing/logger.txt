@@ -1,0 +1,16 @@
+Current|Active|Active|Active| Active |Active| Packets | Active |
+ Round |T/Exmp|Taxes |T/Dtls|accounts| NICs |  read   |sessions|
+-------+------+------+------+--------+------+---------+--------+
+     5 |    4 |    4 |    4 |      6 |    4 |       7 |      6 |
+
+
+ีอออออออัออออออัออออออัออออออัออออออออัออออออัอออออออออัออออออออธ
+ณCurrentณActiveณActiveณActiveณ Active ณActiveณ Packets ณ Active ณ
+ณ round ณt/exmpณtaxes ณt/dtlsณaccountsณ NICs ณ  read   ณsessionsณ
+ฦอออออออุออออออุออออออุออออออุออออออออุออออออุอออออออออุออออออออต
+ณ     5 ณ    4 ณ    4 ณ    4 ณ      6 ณ    4 ณ       7 ณ      6 ณ
+ภฤฤฤฤฤฤฤมฤฤฤฤฤฤมฤฤฤฤฤฤมฤฤฤฤฤฤมฤฤฤฤฤฤฤฤมฤฤฤฤฤฤมฤฤฤฤฤฤฤฤฤมฤฤฤฤฤฤฤฤู
+
+
+
+------------------------------------------------------------

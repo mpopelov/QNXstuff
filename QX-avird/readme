@@ -1,0 +1,6 @@
+This is an anti-virus scanning daemon for QNX Neutrino.
+
+It utilizes libclamav.so (www.clamav.net) and enables programs
+to scan files and byte streams for viruses.
+
+it registers /dev/Qav and waits for commands

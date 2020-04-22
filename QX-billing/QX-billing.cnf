@@ -1,0 +1,51 @@
+#
+# Settings, common for io-net module and for
+# counting client application
+#
+
+# network interface we are going to bill according to
+Interface		en0
+
+
+# device name - the device io-net module opens and counter tries to communicate
+Device	/dev/qxbil
+
+# the length of logging queue in packets
+# the number of packets io-net module will log at maximum and
+# client counter will try to read
+LogPkts			10000
+
+# the length of log database table page in rows.
+# One page of table data will contain that many rows
+# and will sync to disk after that many rows
+# have been written.
+LogRows			1000
+
+
+#
+# To be as safe and fast as possible we try to allocate as many memory
+# beforehand as possible.
+# The following settings are in terms of appropriate units.
+# This means we set the maximum number of active elements of each type we
+# expect there will be.
+#
+MaxTaxes		100
+MaxTaxDetails	500
+MaxAccounts		1000
+MaxNICs			1000
+
+#
+# This many MILLI-seconds client will wait between quering logging device
+# Be sure not to set this value too short to avoid exessive logging.
+# Also avoid setting this value too long as this may lead to overrunning
+# logging queue and making io-net module drop packets.
+#
+SuspendTime		2000
+
+#
+# In database we store how much piece of data costs client.
+# This setting defines that this many bytes cost as much as
+# stated in tax details.
+# i.e. Costs = num_bytes_in_session * (tax_for_session / DataUnits)
+#
+DataUnits		1000000

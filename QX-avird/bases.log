@@ -1,0 +1,41 @@
+
+******* Qavird status *******
+Daemon  started on: Wed Feb 23 00:32:12 2005
+Requests processed: 12
+Viruses   detected: 4
+AV bases loaded on: Wed Feb 23 01:07:03 2005
+Signatures in base: 30903
+
+--- main.cvd ---
+Version   : 29
+Built on  : Fri Jan 14 23:46:43 2005
+Signatures: 29086
+Func.level: 3
+
+--- daily.cvd ---
+Version   : 708
+Built on  : Fri Feb 18 01:37:03 2005
+Signatures: 1817
+Func.level: 4
+
+Reloading antivirus bases successful
+
+******* Qavird status *******
+Daemon  started on: Wed Feb 23 00:32:12 2005
+Requests processed: 12
+Viruses   detected: 4
+AV bases loaded on: Wed Feb 23 01:10:13 2005
+Signatures in base: 31033
+
+--- main.cvd ---
+Version   : 29
+Built on  : Fri Jan 14 23:46:43 2005
+Signatures: 29086
+Func.level: 3
+
+--- daily.cvd ---
+Version   : 719
+Built on  : Tue Feb 22 01:58:25 2005
+Signatures: 1947
+Func.level: 4
+

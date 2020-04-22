@@ -1,0 +1,6 @@
+- make client application to manage tables from console.
+
+LATER
+- php5 interface to Qbase
+- Probably, SQL-addon to support relational table joining
+  (Should be some kind of App on top of this engine)
