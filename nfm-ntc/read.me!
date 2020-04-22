@@ -1,0 +1,53 @@
+I started this project because i needed some kind of mechanism, capable of
+blocking network traffic from/to some user on the LAN based on his/her MAC
+address and not IP (as IP is much more easy to change). The program also should
+be able to count !!! RAW !!! bytes, sent over the LAN to different clients,
+the protocol, used to send those bytes and (whenever possible) IP address +
+TCP/UDP ports - as these are the most heavily used protocols on the network.
+
+!!! This is the seconf edition !!!
+- It allows recieving and sending ARP protocol packets with no limitation
+- It is set up to "DEFAULT-DENY" state - there will be no communication
+  to any host on the network until it is explicitly added to the "ALLOW"
+  list. However this ruleset does not effect the ARP protocol, which is
+  always enabled.
+
+Steps to bring program UP & RUNNING:
+
+1) One does not need any other tools to build the program, rather than
+   supplied with any version (NC/SE/PE) of QNX Neutrino: qcc :0)
+
+2) cd to where you've unpacked this "tar.gz" and issue "make" command.
+   The two binaries will be built:
+   nfm-ntc.so
+   ntcread
+   
+   You may also issue "make filter" and "make reader" to build the library and
+   support example program respectively separately.
+   
+3) For further fast access to library I would suggest you to copy it somewhere
+   onto your LD_LIBRARY_PATH (so you don't need to write the full path when
+   mounting). Suppose you have done so.
+   
+   Now issue "mount -Tio-net nfm-ntc.so" and the library gets mounted into the
+   io-net's pipe. It also creates a resource: /dev/ntc - this one is for
+   managing the state of filter.
+   
+   now you may start ntcread program and it will show some facts about
+   your network flow.
+   
+   !!! REMEMBER !!! to change the MAC address of node on the network whose
+   flow you wish to allow, otherwise you'll se no effect - the MAC hardcoded
+   into the example program - is one of MINE - you surely have the other.
+   
+   Also it is useless to block the frame based on MAC address of your own device:
+   the filter always looks into the field, which refers to the correspondent
+   (i.e. to mac_src - for incoming packets & mac_dst - for outgoing ).
+   
+   
+If you have any questions and/or found some mistakes and/or know how to make
+this code more effective - feel free to contact me:
+
+Mike Anatoly Popelov
+e-mail:	mikep@kaluga.org
+ICQ:	104287300
